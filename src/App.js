@@ -1,18 +1,19 @@
+import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
+
+import { Router } from "./router/Router";
 import "./styles.css";
-import { InlineStyle } from "./components/InlineStyle";
-import { CssModules } from "./components/CssModules";
-import { StyledJsx } from "./components/StyledJsx";
-import { StyledComponents } from "./components/StyledComponents";
-import { Emotion } from "./components/Emotion";
 
 export default function App() {
   return (
-    <div className="App">
-      <InlineStyle />
-      <CssModules />
-      <StyledJsx />
-      <StyledComponents />
-      <Emotion />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Link to="/">Home</Link>
+        <br />
+        <Link to="/Page1">Page1</Link>
+        <br />
+        <Link to="/Page2">Page2</Link>
+      </div>
+      <Router />
+    </BrowserRouter>
   );
 }
